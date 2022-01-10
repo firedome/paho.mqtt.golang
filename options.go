@@ -19,6 +19,7 @@ package mqtt
 
 import (
 	"crypto/tls"
+	"net"
 	"net/http"
 	"net/url"
 	"strings"
@@ -88,6 +89,7 @@ type ClientOptions struct {
 	ResumeSubs              bool
 	HTTPHeaders             http.Header
 	WebsocketOptions        *WebsocketOptions
+	CustomDialer            *net.Dialer
 }
 
 // NewClientOptions will create a new ClientClientOptions type with some
