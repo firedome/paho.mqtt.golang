@@ -131,6 +131,7 @@ func NewClientOptions() *ClientOptions {
 		ResumeSubs:              false,
 		HTTPHeaders:             make(map[string][]string),
 		WebsocketOptions:        &WebsocketOptions{},
+		CustomDialer:            nil,
 	}
 	return o
 }
